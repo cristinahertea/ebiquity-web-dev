@@ -32,9 +32,13 @@ export const App = () => {
             </select>
           </div>
         </div>
-        <Graph type={currentChartType} />
+        <Graph className={'graph'} type={currentChartType} />
       </div>
       <style>{`
+        /* 
+              embedded scoped CSS, normally i would use something like styled-components
+        */
+
         :root {
           --main-font-color: #6194ED;
           --main-dark-color: #2D2F34;
@@ -66,11 +70,15 @@ export const App = () => {
           padding: 10px;
           display: flex;
         }
+        
+        .graph {
+          margin: auto;
+        }
 
         .select {
           font-size: 24px;
           padding: 5px 10px;
-          color: var(--main-font-color)
+          color: var(--main-font-color);
         }
       `}</style>
     </>
